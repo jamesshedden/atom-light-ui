@@ -4,6 +4,11 @@
 .status { .text(normal); }
 .status-added { .text(success); }
 .status-ignored { .text(subtle); }
-.status-modified { .text(warning); }
+
+.status-modified,
+.status-modified .header.list-item {
+  color: @background-color-info !important;
+}
+
 .status-removed { .text(error); }
 .status-renamed { .text(info); }

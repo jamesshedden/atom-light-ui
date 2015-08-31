@@ -1,5 +1,9 @@
 // Colors
 
+@import "syntax-variables";
+.ui-syntax-color() { @syntax-background-color: hsl(220,1%,98%); } .ui-syntax-color(); // fallback color
+@ui-syntax-color: @syntax-background-color;
+
 @text-color: #444;
 @text-color-subtle: #999;
 @text-color-highlight: #000;
@@ -57,7 +61,7 @@
 @tab-background-color-active: #f0f0f0;
 @tab-border-color: lighten(@base-border-color, 10%);
 
-@tree-view-background-color: #eee;
+@tree-view-background-color: white;
 @tree-view-border-color: @base-border-color;
 
 @ui-site-color-1: @background-color-success; // green
@@ -69,7 +73,7 @@
 
 // Sizes
 
-@font-size: 11px;
+@font-size: 12px;
 @input-font-size: 14px;
 @disclosure-arrow-size: 12px;
 
@@ -79,9 +83,12 @@
 @component-line-height: 25px;
 @component-border-radius: 2px;
 
-@tab-height: 26px;
+@tab-height: 36px;
+@tree-view-list-item-height: 24px;
 
+@padding-small: 15px;
 
 // Other
 
 @font-family: 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+@font-family-monospace: 'Menlo', Monaco, Courier, monospace;
