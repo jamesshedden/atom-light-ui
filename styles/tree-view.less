@@ -20,33 +20,25 @@
 	border: 0;
 }
 
-// Trying to target just the repo title in the tree view
-.list-tree.tree-view.project-root {
-	.header.list-item {
+.project-root {
+	// The first direct header, ie the repo title
+	& > .header {
 		height: @tab-height;
 		line-height: @tab-height !important;
+		color: black !important;
 	}
 
 	&::before {
 		height: @tab-height !important;
 	}
 
-	.header.list-item .name.icon.icon-repo {
-		color: black !important;
-	}
-
-	.selected::before {
+	&.selected::before {
 		background: none;
 	}
 }
 
 .list-tree.entries {
-	.header.list-item {
-		height: @tree-view-list-item-height;
-		line-height: @tree-view-list-item-height !important;
-	}
-
-	.entry.list-nested-item.selected,
+	.entry.list-nested-item.selected > .header,
 	.file.entry.list-item.selected {
 			color: white !important;
 	}
