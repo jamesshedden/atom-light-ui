@@ -28,10 +28,27 @@ status-bar {
   background: @tree-view-background-color;
   height: @tab-height;
   line-height: @tab-height;
+  position: relative;
+  top: -39px;
+  background: none;
+  overflow: visible;
+}
+
+.status-bar-right {
+  position: absolute;
+  right: 20px;
+  top: -30px;
+}
+
+.status-bar-left {
+  position: absolute;
+  right: 10px;
+  top: -5px;
 }
 
 .bottom.tool-panel.panel-bottom {
   border: 0;
+  height: 0;
 }
 
 atom-pane-container > atom-pane {
@@ -42,8 +59,10 @@ atom-pane-container > atom-pane {
   background: @tree-view-background-color;
   font-family: @font-family-monospace;
 
-  .find-and-replace {
+  .find-and-replace,
+  .project-find {
     box-shadow: 0 0 10px #9f9f9f;
+    background-color: white;
   }
 }
 

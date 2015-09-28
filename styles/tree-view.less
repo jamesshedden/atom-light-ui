@@ -2,7 +2,7 @@
 
 .tree-view {
 	font-size: @font-size;
-	background: @tree-view-background-color;
+	// background: @tree-view-background-color;
 	font-family: @font-family-monospace;
 
 	.selected:before {
@@ -18,6 +18,7 @@
 
 .left.tool-panel.panel-left {
 	border: 0;
+	background: @syntax-background-color;
 }
 
 .project-root {
@@ -38,6 +39,11 @@
 }
 
 .list-tree.entries {
+
+	.entry:hover {
+		cursor: pointer;
+	}
+
 	.entry.list-nested-item.selected > .header,
 	.file.entry.list-item.selected {
 			color: white !important;
@@ -45,7 +51,7 @@
 
 	.selected::before {
 		height: @tree-view-list-item-height !important;
-		background: blue;
+		background: @text-color-success;
 	}
 }
 
@@ -59,4 +65,20 @@
 
 .file.entry.list-item.selected .name.icon.icon-file-text {
 	color: white;
+}
+
+.tree-view-scroller {
+	height: auto !important;
+	border: 1px solid rgba(0,0,0,0.1);
+	opacity: 0.5;
+	transition: opacity 0.2s ease;
+}
+
+.tree-view-scroller:hover {
+	opacity: 1;
+}
+
+.tree-view-resizer {
+	background: @syntax-background-color;
+	margin: @padding-small;
 }
