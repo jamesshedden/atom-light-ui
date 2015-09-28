@@ -28,22 +28,45 @@ status-bar {
   background: @tree-view-background-color;
   height: @tab-height;
   line-height: @tab-height;
-  position: relative;
+  position: absolute;
   top: -39px;
   background: none;
   overflow: visible;
+  right: @padding-small*3;
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .status-bar-right {
   position: absolute;
-  right: 20px;
-  top: -30px;
+  right: 0;
+  top: -@padding-small*2;
+  height: 50px;
 }
 
-.status-bar-left {
+status-bar .status-bar-left {
   position: absolute;
-  right: 10px;
+  right: 0;
   top: -5px;
+  overflow: visible;
+}
+
+linter-bottom-container {
+  position: absolute;
+  top: -52px;
+  right: 0;
+}
+
+.linter-highlight {
+  margin-right: 0;
+}
+
+.cursor-position {
+  margin-right: 0;
 }
 
 .bottom.tool-panel.panel-bottom {
